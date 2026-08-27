@@ -1,4 +1,4 @@
-export default function About() {
+export default function Collections() {
   return (
     <>
       <div className="loader" id="loader" aria-hidden="true">
@@ -61,31 +61,13 @@ export default function About() {
       </div>
 
       <main id="main">
-        <section className="why-luma" id="about">
-          <div className="section-head center">
-            <p className="eyebrow">Why LUMA</p>
-            <h2>Built around trust</h2>
-          </div>
-          <div className="feature-grid">
-            <div className="feature-card glass">
-              <span className="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"/></svg></span>
-              <h3>Fast Delivery</h3>
-              <p>Quick and reliable shipping.</p>
-            </div>
-            <div className="feature-card glass">
-              <span className="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
-              <h3>Secure Checkout</h3>
-              <p>Your information stays protected.</p>
-            </div>
-            <div className="feature-card glass">
-              <span className="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5L12 3Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"/></svg></span>
-              <h3>Premium Quality</h3>
-              <p>Products selected with care.</p>
-            </div>
-            <div className="feature-card glass">
-              <span className="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/><path d="M15 4h3v3M9 20H6v-3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
-              <h3>Easy Returns</h3>
-              <p>Simple 30-day returns.</p>
+        <section className="featured-collection" id="collection">
+          <div className="fc-media">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1600&auto=format&fit=crop" alt="Minimal studio scene with everyday essentials arranged on a soft neutral surface" />
+            <div className="fc-overlay glass">
+              <p className="eyebrow">The Everyday Collection</p>
+              <h2>Simple things.<br />Exceptional design.</h2>
+              <a href="#shop" className="link-arrow">Explore Collection <span>→</span></a>
             </div>
           </div>
         </section>

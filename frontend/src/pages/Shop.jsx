@@ -1,4 +1,4 @@
-export default function About() {
+export default function Shop() {
   return (
     <>
       <div className="loader" id="loader" aria-hidden="true">
@@ -61,31 +61,65 @@ export default function About() {
       </div>
 
       <main id="main">
-        <section className="why-luma" id="about">
-          <div className="section-head center">
-            <p className="eyebrow">Why LUMA</p>
-            <h2>Built around trust</h2>
+        <section className="shop-section" id="shop">
+          <div className="section-head">
+            <div>
+              <p className="eyebrow">The Full Range</p>
+              <h2>Shop everything</h2>
+            </div>
+
+            <div className="shop-tools">
+              <button className="btn btn-glass" id="filterToggle">
+                <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
+                Filters
+              </button>
+              <select className="select-glass" id="sortSelect" aria-label="Sort products">
+                <option value="featured">Featured</option>
+                <option value="newest">Newest</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating">Rating</option>
+              </select>
+            </div>
           </div>
-          <div className="feature-grid">
-            <div className="feature-card glass">
-              <span className="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"/></svg></span>
-              <h3>Fast Delivery</h3>
-              <p>Quick and reliable shipping.</p>
-            </div>
-            <div className="feature-card glass">
-              <span className="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
-              <h3>Secure Checkout</h3>
-              <p>Your information stays protected.</p>
-            </div>
-            <div className="feature-card glass">
-              <span className="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5L12 3Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"/></svg></span>
-              <h3>Premium Quality</h3>
-              <p>Products selected with care.</p>
-            </div>
-            <div className="feature-card glass">
-              <span className="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/><path d="M15 4h3v3M9 20H6v-3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
-              <h3>Easy Returns</h3>
-              <p>Simple 30-day returns.</p>
+
+          <div className="shop-layout">
+            <aside className="filter-panel glass" id="filterPanel">
+              <div className="filter-block">
+                <h3>Category</h3>
+                <label className="check"><input type="checkbox" value="Electronics" className="f-category" /><span>Electronics</span></label>
+                <label className="check"><input type="checkbox" value="Fashion" className="f-category" /><span>Fashion</span></label>
+                <label className="check"><input type="checkbox" value="Accessories" className="f-category" /><span>Accessories</span></label>
+                <label className="check"><input type="checkbox" value="Home" className="f-category" /><span>Home</span></label>
+              </div>
+              <div className="filter-block">
+                <h3>Price</h3>
+                <label className="check"><input type="radio" name="price" value="0-50" className="f-price" /><span>Under $50</span></label>
+                <label className="check"><input type="radio" name="price" value="50-100" className="f-price" /><span>$50–$100</span></label>
+                <label className="check"><input type="radio" name="price" value="100-200" className="f-price" /><span>$100–$200</span></label>
+                <label className="check"><input type="radio" name="price" value="200-99999" className="f-price" /><span>$200+</span></label>
+                <label className="check"><input type="radio" name="price" value="" className="f-price" defaultChecked /><span>Any price</span></label>
+              </div>
+              <div className="filter-block">
+                <h3>Rating</h3>
+                <label className="check"><input type="radio" name="rating" value="4" className="f-rating" /><span>4+ stars</span></label>
+                <label className="check"><input type="radio" name="rating" value="4.5" className="f-rating" /><span>4.5+ stars</span></label>
+                <label className="check"><input type="radio" name="rating" value="" className="f-rating" defaultChecked /><span>Any rating</span></label>
+              </div>
+              <div className="filter-block">
+                <h3>Availability</h3>
+                <label className="check"><input type="checkbox" id="f-instock" /><span>In Stock only</span></label>
+              </div>
+              <button className="btn btn-ghost" id="clearFilters">Clear filters</button>
+            </aside>
+
+            <div className="grid-wrap">
+              <p className="result-count" id="resultCount"></p>
+              <div className="product-grid" id="productGrid"></div>
+              <div className="empty-state" id="noResults" hidden>
+                <p className="empty-title">Nothing matched your search.</p>
+                <p className="empty-sub">Try a different keyword or clear your filters.</p>
+              </div>
             </div>
           </div>
         </section>
